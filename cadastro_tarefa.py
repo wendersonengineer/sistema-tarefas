@@ -46,14 +46,14 @@ print(f"Deve ser tratada como prioritária: {prioritaria}")
 
 '''
 -------------------------------------------------------------------------
-    Cenário        |   Prioridade  | Prazo  | Urgente  | Resultado 
-                                                          esperado para 
-                                                          prioritaria 
+    Cenário        |   Prioridade    | Prazo  | Urgente    | Resultado 
+                                                            esperado para 
+                                                            prioritaria 
 -------------------------------------------------------------------------
 Tarefa
 planejada           |   2            | 6.5     | nao       | False
 ------------------------------------------------------------------------
-Correção crítica    |   5            | 1.5     | sim       | True
+Correção crítica    |   3            | 1.5     | sim       | True
 -------------------------------------------------------------------------
 
 '''
