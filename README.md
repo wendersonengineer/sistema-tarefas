@@ -1,6 +1,9 @@
 # Sistema Web de Gestão de Tarefas
 
-Projeto inicial para organização de tarefas.
+Projeto desenvolvido na disciplina de Back-End.
+Objetivo: criar um sistema simples de tarefas em python, evoluindo em etapas.
+
+---
 
 ## Pré-requisito
 * Python 3 instalado
@@ -41,10 +44,48 @@ python main.py
 
 ```
 sistema-tarefas/
-|____ .gitignore        # Filtro de arquivos do Git
-|____ README.md         # Instruções de execução
-|____ main.py           # Script principal do sistema
-|____ requirements.txt  # Listagem de dependências
-|____ .venv/ # local;   # Local; não versionada (omitida pelo .gitignore)
+|
+|____ .venv/                        # local - não versionada (omitida pelo .gitignore)
+|____ main.py                       # Atividade 1 - mensagem inicial
+|____ cadastro_tarefa.py            # Atividade 2 - cadastroo simples
+|____ cadastro_tarefas_simples.py   # Atividade 3 - menu sem funções
+|____ cadastro_tarefas.py           # Atividade 3 - menu com funções
+|____ requirements.txt              # Listagem de dependências
+|____ .gitignore                    # Filtro de arquivos do Git
+|____ README.md                     # Documentação completa
 
 ```
+---
+
+## Atividade 1 - estrutura inicial
+Arquivo: `main.py`
+Função: exibir mensagem inicial do sistema.
+
+---
+
+## Atividade 2 - Cadastro de tarefas
+Arquivo: cadastro_tarefa.py
+Função: permitir o registro de tarefas com título e prioridade.
+Incluir validações ásicas para evitar campos vazios ou valores inválidos.
+
+---
+
+## Atividade 3 - Menu de tarefas
+
+### Versão simples (sem funções)
+Arquivo: `menu_tarefas_simples.py`
+- Menu impplementado diretamente no loop 'while True'.
+- Lógica separadas para cadastrar, listar e atualizar tarefas.
+- Menu principal chama cada função conforme a opção escolhida.
+- Estrutura mais organizada e fácil de manter.
+
+---
+
+## Execução
+Noterminal:
+```bash
+python main.py
+
+
+
+
