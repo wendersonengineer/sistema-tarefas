@@ -49,18 +49,24 @@ python main.py
 
 ```text
 
+## 📁 Estrutura do Repositório
+
+```text
 sistema-tarefas/
-|
-├── .venv/
-├── .gitignore
-├── main.py
-├── cadastro_tarefa.py
-├── menu_tarefas_simples.py
-├── menu_tarefas.py
-├── gerenciador_chamados_simples.py
-├── gerenciador_chamados.py
-├── requirements.txt
-└── README.md
+│
+├── .venv/                           # Ambiente virtual do Python (não versionado)
+├── .gitignore                       # Arquivo de regras para ignorar a pasta .venv/
+├── requirements.txt                 # Registro de dependências do projeto
+├── README.md                        # Documentação completa e histórico de evolução
+│
+├── main.py                          # Histórico: Atividade 1 (Setup inicial) | Ponto de entrada (Atividade 5)
+├── cadastro_tarefa.py               # Histórico: Atividade 2 (Variáveis, operadores e f-strings)
+├── menu_tarefas_simples.py          # Histórico: Atividade 3 (Menu procedural com while e if)
+├── menu_tarefas.py                  # Histórico: Atividade 3 (Menu modular com funções)
+├── gerenciador_chamados_simples.py  # Histórico: Atividade 4 (Manipulação de coleções e set)
+├── gerenciador_chamados.py          # Histórico: Atividade 4 (Gerenciador modularizado)
+├── chamados.py                      # Atividade 5: Classe Chamado (Modelo POO)
+└── servicos.py                      # Atividade 5: Camada de Regras de Negócio
 
 ```
 
@@ -233,5 +239,28 @@ Categorias mapeadas no sistema (sem duplicações):
 ---
 
 ## 👥 Identificação de Autoria
+* **Desenvolvedor:** Wenderson Luís dos Santos
+* **RA:** 202422912
+
+---
+
+### Atividade 5 - Refatoração com POO, Módulos e Arquitetura em Camadas
+
+#### 🎯 Objetivo
+Transformar o protótipo procedural em um sistema modularizado, separando a classe de modelo, as regras de negócio e a interface de terminal.
+
+#### 🏗️ Arquitetura dos Módulos:
+
+* **`chamados.py` (Modelo / POO):**
+  * Classe `Chamado` encapsulando atributos e estados (`Aberto`, `Em Atendimento`, `Concluído`, `Fechado`, `Reaberto`).
+  * Métodos de transição de estado (`atender()`, `concluir()`, `fechar()`, `reabrir()`) e formatadores (`__str__` e `resumo_linha()`).
+
+* **`servicos.py` (Regras de Negócio):**
+  * Concentra as funções puras do sistema: cadastro, busca por ID, atualização com validação de dados, listagem, filtros por situação e prioridade, extração de categorias (`set`) e estatísticas.
+
+* **`main.py` (Interface e Controller):**
+  * Menu interativo via terminal (`while True`), captura segura de inputs do usuário com `.strip()` e `.isdigit()`, e inicialização automática com 3 chamados para demonstração.
+
+## 👥 Autoria
 * **Desenvolvedor:** Wenderson Luís dos Santos
 * **RA:** 202422912
