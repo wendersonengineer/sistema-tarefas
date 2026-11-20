@@ -18,3 +18,5 @@ def lista_tarefas(request):
     ]
     return render(request, "tarefas/lista.html", {"tarefas": tarefas})
 
+def home(request):
+    return render(request, "tarefas/home.html")

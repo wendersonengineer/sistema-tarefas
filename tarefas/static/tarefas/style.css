@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    background: rgb(4, 4, 219);
+    color: white;
+    padding: 20px;
+
+
+}
+
+#p-header {
+    text-align: center;
+    font-size: 30px;
+}
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid gray;
+    background: rgb(23, 23, 251);
+    color: white;
+}
+
+.btn-acessar {
+    border-radius: 4px;
+    background: greenyellow;
+    padding: 7px;
+
+
+}
+
+a {
+    text-decoration: None;
+}

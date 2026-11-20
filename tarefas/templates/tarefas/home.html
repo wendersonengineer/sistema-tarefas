@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Web de Gestão de Tarefas</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #334155;
+        }
+
+        nav {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #477fb5, #285987);
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 650px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 26px;
+            border-radius: 7px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: #285987;
+        }
+
+        .btn-primary:hover {
+            background-color: #e8f0f8;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 23px;
+            margin-bottom: 22px;
+            color: #1e3a5f;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .card-option {
+            display: block;
+            background-color: white;
+            padding: 30px 25px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-option:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .card-option h3 {
+            font-size: 19px;
+            margin-bottom: 10px;
+            color: #1e3a5f;
+        }
+
+        .card-option p {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Sistema de Gestão de Tarefas</div>
+        <div>Bem-vindo ao sistema</div>
+    </nav>
+
+    <section class="hero">
+        <h1>Organize e acompanhe suas tarefas</h1>
+
+        <p>
+            Bem-vindo ao Sistema Web de Gestão de Tarefas.
+            Consulte as atividades registradas e acompanhe
+            suas prioridades e situações de forma simples.
+        </p>
+
+        <a href="{% url 'lista_tarefas' %}" class="btn btn-primary">
+            Visualizar tarefas
+        </a>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Acesso rápido</h2>
+
+        <div class="options-grid">
+
+            <a href="{% url 'lista_tarefas' %}" class="card-option">
+                <div class="card-icon">📋</div>
+                <h3>Lista de tarefas</h3>
+                <p>
+                    Visualize as tarefas disponíveis,
+                    suas prioridades e situações atuais.
+                </p>
+            </a>
+
+            <a href="{% url 'inicio' %}" class="card-option">
+                <div class="card-icon">🏠</div>
+                <h3>Apresentação do sistema</h3>
+                <p>
+                    Acesse a página inicial desenvolvida
+                    durante a atividade prática de Django.
+                </p>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        Sistema Web de Gestão de Tarefas — Projeto Acadêmico
+    </footer>
+
+</body>
+
+</html>
