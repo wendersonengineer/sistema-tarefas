@@ -292,7 +292,7 @@
 
                     {% else %}
                     <span class="badge status-default">
-                        {{ tarefa.prioridade }}
+                        {{ tarefa.get_prioridade_display }}
                     </span>
                     {% endif %}
                 </div>
@@ -302,17 +302,17 @@
 
                     {% if tarefa.situacao == "Pendente" %}
                     <span class="badge status-pending">
-                        {{ tarefa.situacao }}
+                        {{ tarefa.get_situacao_display }}
                     </span>
 
                     {% elif tarefa.situacao == "Concluída" %}
                     <span class="badge status-completed">
-                        {{ tarefa.situacao }}
+                        {{ tarefa.get_situacao_display }}
                     </span>
-
+                    
                     {% else %}
                     <span class="badge status-default">
-                        {{ tarefa.situacao }}
+                        {{ tarefa.get_situacao_display }}
                     </span>
                     {% endif %}
                 </div>
